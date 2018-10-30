@@ -39,5 +39,24 @@ public static void (String[]){
 void main(){
 
 }
+```
+``` java
+public class InnerClass{
 
+    private int out = 10;
+
+    private void test(){
+        int result = new Inner().in;
+        System.out.println(result);
+    }
+
+    private class Inner{
+        private int in = out;
+    }
+
+    public static void main (String[] args) {
+        InnerClass innerClass = new InnerClass();
+        innerClass.test();
+    }
+}
 ```
